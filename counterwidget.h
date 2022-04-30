@@ -13,7 +13,7 @@ class CounterWidget : public QWidget
 public:
     CounterWidget(QWidget *parent = nullptr);
     ~CounterWidget();
-
+    void updateLEDS();
 public slots:
     void updateCounter();
 
@@ -21,6 +21,8 @@ private:
      int m_count;
      QTimer m_timer;
      Gpio m_gpio;
+     int m_number;
+     QLCDNumber* m_lcd;
 
 };
 
